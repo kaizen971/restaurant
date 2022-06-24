@@ -1,8 +1,6 @@
-head
-  meta(charset='utf-8')
-  title Title2
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+extends layout.pug
 
+block content
   body
     .modal-dialog
         .modal-content
@@ -19,11 +17,11 @@ head
               select#name.form-control
                 each cuisine in cuisines
                   option(value=cuisine) #{cuisine}
-              input#name.form-control(type='text', placeholder='indique ton restaurant' name='cuisine')
+              input#name.form-control(type='text', placeholder='indique ton type de cuisine' name='cuisine')
               select#name.form-control
                 each borough in boroughs
                   option(value=borough) #{borough}
-              input#name.form-control(type='text', placeholder='indique ton restaurant' name='borough')
+              input#name.form-control(type='text', placeholder='indique ton arrondissement' name='borough')
               button.btn.btn-primary(type="submit") Recherche
            
               
