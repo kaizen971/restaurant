@@ -1,0 +1,30 @@
+head
+  meta(charset='utf-8')
+  title Title2
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+  body
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") ×
+              span.sr-only Close
+            h4#myModalLabel.modal-title
+              | Choix de restaurant
+          // Modal Body
+          .modal-body
+            form(role='form' method='GET' action='/resto')
+                input#name.form-control(type='text', placeholder='indique ton restaurant' name='name')
+                button.btn.btn-primary(type="submit") Recherche
+
+            div.form-group
+            if name
+                p #{name}
+            if restaurants
+                each restaurant in restaurants
+                    p Name : #{restaurant.name}
+                    p Cuisine : #{restaurant.cuisine}
+                    p Adresse : #{restaurant.address.building} #{restaurant.address.street} #{restaurant.borough}
+                    p ---------------------

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body { margin: 0; }
+
+body > nav {
+  background-color: #313131;
+  box-shadow: 0 0.1rem 0.1rem #c0c0c0;
+}
+
+body > nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+body > nav a:link,
+body > nav a:visited {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: all 200ms;
+}
+body > nav a:hover {
+  background-color: #fff;
+  color: black;
+}
+body > nav a:active {
+  background-color: rgb(133, 85, 9);
+  color: black;
+  transition: none;
+}
+
+/**
+ * Main container
+ */
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/**
+ * Misc
+ */
+
+fieldset {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='url'],
+select {
+  font-size: 1rem;
+  padding: 0.25rem 0.4rem;
+  border: thin solid #9e9e9e;
+  border-radius: 0.125rem;
+}
+
+input[type='submit'],
+input[type='reset'],
+button {
+  font-size: 1.2rem;
+  padding: 0.25rem 0.4rem;
+  border: thin solid #9e9e9e;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
